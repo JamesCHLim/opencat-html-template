@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: #E5E5E5;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 1.25rem;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-icon, .menu-icon-cross {
+    text-align: end;
+    align-self: center;
+}
+
+.menu-icon-cross.fartbomb {
+    color: red;
+    display: none;
+}
+
+.submenu {
+    align-self: stretch;
+    flex: 0 0 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    cursor: pointer
+}
+
+.submenu-content {
+    display: none;
+    padding: 0 1.25rem;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 50px);
+    flex-flow: column wrap;
+}
+
+@media (min-width: 900px) {
+    .submenu-content {
+        display: inline-block;
+        position: static;
+    }
+    .submenu-content.submenu-content > a {
+        border-bottom: none;
+    }
+    .menu-icon, .menu-icon-cross {
+        display: none !important;
+    }
+}
+
+.submenu-content a {
+    color: black;
+}
+
+.submenu-content > a {
+    border-bottom: 2px solid #261C3F27;
+    padding: 1.75rem 0;
+}
+
+.submenu:hover .submenu-content {
+    /* display: flex; */
+}
+
+header:hover {
+    /* position: absolute; */
+}
+
+.submenu:hover .menu-icon {
+   /* display: none; */ 
+}
+
+.submenu:hover .menu-icon-cross {
+    /* display: inline-block; */
+}
+
+.header-login, .footer-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+}
+
+.header-login {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+}
+
+.sign-up-btn, .login-btn {
+    width: 105px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-btn {
+    color: white;
+    background: #EE3159;
+}
+
+.title {
+    /* display: grid; */
+    /* place-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: url("https://via.placeholder.com/1920x300?Text=TitleImage");
+    background-color: #C4C4C481;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity 0.2;
+}
+
+.title h1 {
+    text-align: center;
+}
+
+.title h1 {
+    /* opacity: 1; */
+}
+
+.subtitle {
+    text-align: center;
+    margin: 20px;
+}
+
+.card-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    margin: 20px;
+    box-shadow: 0px 25px 60px rgba(0,0,0,0.1);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-text {
+    margin: 1rem;
+}
+
+.card-text h3 {
+    margin-bottom: 0.5rem;
+}
+
+.anonymous-user-banner {
+    height: 15rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #261C3F;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.anonymous-user-banner a {
+    text-transform: uppercase;    
+    padding: 0.5rem;
+    background: #EE3159;
+    font-size: 0.75rem;
+}
+
+footer {
+    background: #171126;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.footer-submenu {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.site-logo-image {
+    align-self: center;
+}
+
+.social-media-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
