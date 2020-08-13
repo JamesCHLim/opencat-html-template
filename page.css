@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --main-color: #261c3f;
+    --dark-color: #171126;
+    --secondary-color: #EE3159;
+    --secondary-background: #F4F4F4;
+    --article-hero-height-small: 13rem;
+    --article-hero-height-large: 18rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Montserrat, sans-serif;
+    color: var(--main-color);
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+a:visited {
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-nav {
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.button, .red-button {
+    padding: 0.6rem 1.1rem;
+    color: white;
+    display: inline-flex;
+    flex-basis: auto;
+}
+
+.red-button {
+    background: var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#article-nav {
+    background-color: var(--main-color);
+    color: white;
+    height: 50px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.page-description {
+    display: none;
+}
+
+.pad-content {
+    padding: 2rem 0;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 50px max(20px, 10%);
+}
+
+.subtitle::before {
+    content: "";
+    display: block;
+    width: 100px;
+    margin: 0 auto 2rem;
+    border: 1px solid var(--main-color);
+    opacity: 0.3;
+}
+
+.article {
+    padding: 2rem max(1rem, 10%) 3.5rem;
+}
+
+.article img {
+    max-width: 100%;
+}
+
+.article p {
+    text-align: left;
+}
+
+.article * + * {
+    margin-top: 1em;
+}
+
+#footer {
+    background: var(--dark-color);
+    color: white;
+}
+
+#footer-signup {
+    background-color: var(--main-color);
+    min-height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-signup h2 {
+    color: white;
+}
+
+#footer-signup * + * {
+    margin-top: 1.5rem;
+}
+
+#contacts * + * {
+    margin-top: 1rem;
+}
+
+#contacts {
+    padding: 3rem max(1.5rem, 5%);
+}
+
+/* medium size */
+@media(min-width: 500px) {
+    .pad-content {
+        padding: 4rem max(32px, 10%);
+    }
+
+    .top-bar {
+        padding: 1rem 2rem 1rem;
+    }
+
+    .article {
+        padding: 4rem max(1rem, 10%) 4.5rem;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    .page-description {
+        display: block;
+    }
+
+    #footer-signup {
+        min-height: 150px;
+    }
+}
+
+/* Large size */
+@media(min-width: 1050px) {
+    .course-card-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .course-card {
+        margin: 0 2rem 3rem;
+    }
+
+    #contacts {
+        padding: 2rem max(0.5rem, 5%);
+    }
+
+    .top-footer {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-items: center;
+        justify-content: space-between;
+    }
+
+    .top-footer .footer-logo{
+        justify-self: start;
+    }
+    
+    .top-footer .footer-contacts{
+        justify-self: center;
+    }
+
+    .top-footer .footer-login {
+        justify-self: end;
+    }
+
+    .footer-contacts, .footer-login {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        /* gap: 1rem; */
+    }
+
+    #contacts * + * {
+        margin-top: 0rem;
+    }
+    
+    .footer-contacts * + *, .footer-login * + * {
+        margin: 0 0 0 1rem;
+    }
+}
