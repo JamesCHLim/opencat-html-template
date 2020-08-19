@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --primary_color_dark: #261c3f;
+    --secondary_color_dark: #171126;
+    --accent_color: #EE3159;
+    --secondary_color_bright: #F4F4F4;
+}
+
+/* Global styles */
+* {
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    color: var(--primary_color_dark);
+}
+
+i {
+    font-style: normal;
+}
+
+/* {{ General blocks }} */
+
+/* link block */
+.link {
+    text-decoration: none;
+    color: var(--primary_color_dark);
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+/* button block */
+.button {
+    padding: 1em 2em;
+    display: inline-flex;
+    text-decoration: none;
+    border-radius: 5%;
+    font-size: 0.8em;
+}
+.button_bg_red {
+    background: var(--accent_color);
+    color: white;
+}
+.button_bg_dark {
+    background: var(--secondary_color_dark);
+    color: white;
+}
+.button_bg_bright {
+    background: var(--secondary_color_bright);
+    color: var(--secondary_color_dark);
+}
+
+/* {{ Specific blocks }} */
+
+/* page block */
+.page__navigation {
+    width: 100%;
+    z-index: 1;
+}
+.page__header {
+    padding: 0 20px;
+}
+.page__landing-cards {
+    padding: 5rem 1rem 5rem;    
+}
+.page__course-cards {
+    padding: 5rem 1rem 5rem;
+}
+.page__footer {
+    padding: 0rem 0 0;
+}
+
+/* navigation block */
+.navigation {
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation__nav-menu {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0 8rem;
+}
+.navigation__nav-menu_disabled {
+    display: none;
+}
+.navigation__link {
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #261c3f25
+}
+.navigation__burger {
+    height: inherit;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.navigation__signup {
+    margin: 4rem 0 3rem;
+}
+.navigation__burger_disabled {
+    display: none;
+}
+.navigation_bg_white {
+    background: white;
+}
+
+/* signup block */
+.signup__button {
+    margin: 0 0.25rem;
+}
+
+/* icon block */
+.icon {
+    font-size: 2.5em;
+}
+.icon_state {
+    display: none;
+}
+
+/* header block */
+.header {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+}
+.header__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("https://via.placeholder.com/500x500");
+    /* background: grey; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: inherit;
+    width: 100%;
+    color: black;
+}
+.header__content-wrap {
+    display: flex;
+    flex-flow: column wrap;
+    height: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header__title {
+    color: white;
+    font-size: 2rem;
+}
+
+/* landing-card-section block */
+.landing-card-section {
+    
+}
+.landing-card-section__title {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.landing-card-section__card {
+    margin-top: 2rem;
+    padding: 0 0.5rem 0;
+}
+
+/* landing-card block */
+.landing-card {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.landing-card__circle {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 4px solid var(--primary_color_dark);
+}
+.landing-card__circle_state {
+    display: none;
+}
+.landing-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+/* course-card-section block */
+.course-card-section {
+    background-color: var(--secondary_color_bright);
+}
+.course-card-section__title {
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+}
+.course-card-section__list {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+.course-card-section__button {
+    margin-top: 3em;
+}
+
+/* course-card block */
+.course-card {
+    max-width: 320px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.25);
+}
+.course-card__image {
+    max-width: 100%;
+}
+.course-card__content-wrap {
+    padding: 10px 20px;
+}
+.course-card__title {
+    font-size: 1.5rem;
+}
+.course-card__text {
+    margin-top: 0.5em;
+}
+
+/* footer block */
+.footer__signup {
+    padding: 4rem 0;
+}
+.footer__main {
+    padding: 2rem 0;
+}
+
+/* footer-signup block */
+.footer-signup {
+    background-color: var(--primary_color_dark);
+}
+.footer-signup__title {
+    color: white;
+    font-size: 1.75rem;
+}
+.footer-signup__button {
+    margin-top: 2rem;
+}
+
+/* footer-main block */
+.footer-main {
+    background: var(--secondary_color_dark);
+}
+.footer-main__link {
+    color: white;
+}
+.footer-main__nav {
+    margin-top: 1rem;
+}
+.footer-main__signup {
+    margin-top: 1rem;
+}
+
+/* media query for medium screen (approx 500px) */
+@media (min-width: 31rem) {
+    .page__header {
+        height: 375px;
+    }
+    .page__navigation {
+        padding: 20px;
+    }
+    .navigation__nav-menu {
+        top: 98px;
+    }
+    .landing-card-section__card {
+        padding: 0;
+    }
+    .landing-card__circle_state {
+        display: block;
+    }
+    .landing-card__content-wrap {
+        padding: 0 2rem 0 7rem;
+    }
+    .landing-card__title {
+        text-align: left;
+    }
+    .landing-card__text {
+        text-align: left;
+    }
+    .course-card-section__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* media query for large screen (approx 1000px) */
+@media (min-width: 63rem) {
+    .landing-card-section__card-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing-card-section__card {
+        flex: 1 0 350px;
+    }
+    .landing-card__circle {
+        position: static;
+        width: 76px;
+        height: 76px;
+        border-radius: 100%;
+        border: 4px solid var(--primary_color_dark);
+        margin: 0 auto;
+    }
+    .landing-card__content-wrap {
+        padding: 0;
+        margin: 1rem 2rem 2rem;
+    }
+    .landing-card__title {
+        text-align: center;
+    }
+    .landing-card__text {
+        text-align: center;
+    }
+    .course-card-section__card {
+        margin: 1rem;
+    }
+    .footer-main__top-bar {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    .footer-main__nav, .footer-main__signup {
+        margin-top: 0;
+    }
+    .footer-main__nav {
+        display: flex;
+        justify-self: center;
+        gap: 1.25em;
+    }
+    .footer-main__signup {
+        justify-self: end;
+    }
+    .footer-main__logo {
+        justify-self: start;
+    }
+}
